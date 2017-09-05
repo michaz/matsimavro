@@ -1,0 +1,133 @@
+{
+  "type": "record",
+  "name": "person",
+  "namespace": "org.matsim",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "plans",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "plan",
+          "fields": [
+            {
+              "name": "score",
+              "type": ["null", "double"]
+            },
+            {
+              "name": "type",
+              "type": ["null", "string"]
+            },
+            {
+              "name": "selected",
+              "type": "boolean"
+            },
+            {
+              "name": "elements",
+              "type": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "record",
+                    "name": "activity",
+                    "fields": [
+                      {
+                        "name": "x",
+                        "type": ["null", "double"]
+                      },
+                      {
+                        "name": "y",
+                        "type": ["null", "double"]
+                      },
+                      {
+                        "name": "z",
+                        "type": ["null", "double"]
+                      },
+                      {
+                        "name": "link",
+                        "type": ["null", "string"]
+                      },
+                      {
+                        "name": "facility",
+                        "type": ["null", "string"]
+                      },
+                      {
+                        "name": "start_time",
+                        "type": ["null", "double"]
+                      },
+                      {
+                        "name": "end_time",
+                        "type": ["null", "double"]
+                      },
+                      {
+                        "name": "max_dur",
+                        "type": ["null", "double"]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "record",
+                    "name": "leg",
+                    "fields": [
+                      {
+                        "name": "mode",
+                        "type": "string"
+                      },
+                      {
+                        "name": "dep_time",
+                        "type": ["null", "double"]
+                      },
+                      {
+                        "name": "trav_time",
+                        "type": ["null", "double"]
+                      },
+                      {
+                        "name": "route",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "route",
+                            "fields": [
+                              {
+                                "name": "type",
+                                "type": ["null", "string"]
+                              }, {
+                                "name": "start_link",
+                                "type": ["null", "string"]
+                              }, {
+                                "name": "end_link",
+                                "type": ["null", "string"]
+                              }, {
+                                "name": "trav_time",
+                                "type": ["null", "double"]
+                              }, {
+                                "name": "distance",
+                                "type": ["null", "double"]
+                              }, {
+                                "name": "vehicleRefId",
+                                "type": ["null", "string"]
+                              }, {
+                                "name": "description",
+                                "type": ["null", "string"]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

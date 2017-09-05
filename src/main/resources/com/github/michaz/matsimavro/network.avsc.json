@@ -1,0 +1,55 @@
+{
+  "type": "record",
+  "name": "network",
+  "namespace": "org.matsim",
+  "fields": [
+    {
+      "name": "nodes",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "node",
+          "fields": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "x",
+              "type": "double"
+            },
+            {
+              "name": "y",
+              "type": "double"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "links",
+      "type": {
+        "type" : "array",
+        "items": {
+          "type": "record",
+          "name": "link",
+          "fields": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "fromNode",
+              "type": "string"
+            },
+            {
+              "name": "toNode",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
